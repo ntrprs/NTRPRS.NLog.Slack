@@ -1,6 +1,9 @@
+![Logo](https://raw.githubusercontent.com/ntrprs/NTRPRS.NLog.Slack/master/nuget.png)
 NTRPRS.NLog.Slack
 ==========
 An NLog target for Slack - your logs in one place and instantly searchable, everywhere.
+
+[![Build status](https://ci.appveyor.com/api/projects/status/bmdsm0gqsd5luk79?svg=true)](https://ci.appveyor.com/project/leobuskin/ntrprs-nlog-slack) [![NuGet package](https://img.shields.io/badge/nuget-v5.0-blue.svg)](https://www.nuget.org/packages/NTRPRS.NLog.Slack)
 
 Use default Features
 ![NTRPRS.NLog.Slack](example.png)
