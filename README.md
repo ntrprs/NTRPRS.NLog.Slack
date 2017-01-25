@@ -3,7 +3,7 @@ NTRPRS.NLog.Slack
 An NLog target for Slack - your logs in one place and instantly searchable, everywhere.
 
 Use default Features
-![NTRPRS.NLog.Slack](exampleNlogToSlack.png)
+![NTRPRS.NLog.Slack](example.png)
 
 Or create your own attachment
 
