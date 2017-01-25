@@ -1,5 +1,5 @@
 ﻿{
-  "version": "5.0.2-*",
+  "version": "5.0.3-*",
   "description": "An NLog target for Slack - your logs in one place and instantly searchable, everywhere.",
   "authors": [ "Paul Price", "Cyril Gandon", "Leonard Buskin" ],
   "packOptions": {
@@ -18,7 +18,7 @@
     "projectUrl": "https://github.com/ntrprs/NTRPRS.NLog.Slack",
     "licenseUrl": "https://github.com/ntrprs/NTRPRS.NLog.Slack/master/LICENSE.txt",
     "requireLicenseAcceptance": false,
-    "iconUrl": "https://github.com/ntrprs/NTRPRS.NLog.Slack/nuget.png",
+    "iconUrl": "https://raw.githubusercontent.com/ntrprs/NTRPRS.NLog.Slack/master/nuget.png",
     "repository": {
       "type": "git",
       "url": "git://github.com/ntrprs/NTRPRS.NLog.Slack"
