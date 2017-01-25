@@ -12,7 +12,7 @@ Or create your own attachment
 
 Installation
 ============
-Via [NuGet](https://www.nuget.org/packages/NTRPRS.NLog.Slack/): ```Install-Package NLogToSlack```
+Via [NuGet](https://www.nuget.org/packages/NTRPRS.NLog.Slack/): ```Install-Package NTRPRS.NLog.Slack```
 
 ... or just build it yourself!
 
@@ -38,7 +38,7 @@ Usage
             layout="${message}"
             webHookUrl="https://hooks.slack.com/services/%your%/%tokens%/%here%"
             channel="#log"
-            username="NLogToSlack"
+            username="NTRPRS.NLog.Slack"
             icon=":ghost:" />
   </targets>
 
