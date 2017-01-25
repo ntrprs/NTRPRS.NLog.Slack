@@ -1,4 +1,4 @@
-version: 5.0.0-{build}
+version: 5.0.2-{build}
 clone_folder: c:\projects\nlog
 build_script:
   - ps: .\build.ps1
@@ -11,7 +11,7 @@ deploy:
   api_key:
     secure: QQQ2lpOVxxjRGCF7xGtWri1yov8rDUENp7lX8y0cymZPEyV8grMMveniEti3Fr/9
   skip_symbols: false
-  artifact: /artifacts\\.*\.nupkg/
+  artifact: /.*\.nupkg/
   
 artifacts:
   - path: 'artifacts\*.nupkg'
