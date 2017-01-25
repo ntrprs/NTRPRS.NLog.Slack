@@ -1,0 +1,11 @@
+version: 5.0.0-{build}
+clone_folder: c:\projects\nlog
+build_script:
+  - ps: .\build.ps1
+
+test_script:
+  - ps: .\run-tests.ps1
+
+deploy: off
+artifacts:
+  - path: 'artifacts\*.nupkg'

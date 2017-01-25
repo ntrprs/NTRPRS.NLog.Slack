@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7F79B7A7-94C0-43C4-B8E2-7F1210FBF50F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F81F5B25-E011-4DF5-80CF-795B5CE8FF16}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NTRPRS.NLog.Slack", "src\NTRPRS.NLog.Slack\NTRPRS.NLog.Slack.xproj", "{66082265-CE23-469C-832E-91F390EC5FF3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7418CA81-0582-4E50-AD83-12284172D320}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NTRPRS.NLog.Slack.Tests", "tests\NTRPRS.NLog.Slack.Tests\NTRPRS.NLog.Slack.Tests.xproj", "{E01005BF-17FC-4DCF-A6EB-4C7D64AB7F37}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demos", "demos", "{D9C94C07-2BD3-4C8D-968A-B6B852ACD8AE}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NTRPRS.NLog.Slack.Demo", "demos\NTRPRS.NLog.Slack.Demo\NTRPRS.NLog.Slack.Demo.xproj", "{1F4A9261-9909-4A97-904B-68811FA9ECDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66082265-CE23-469C-832E-91F390EC5FF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66082265-CE23-469C-832E-91F390EC5FF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66082265-CE23-469C-832E-91F390EC5FF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66082265-CE23-469C-832E-91F390EC5FF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E01005BF-17FC-4DCF-A6EB-4C7D64AB7F37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E01005BF-17FC-4DCF-A6EB-4C7D64AB7F37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E01005BF-17FC-4DCF-A6EB-4C7D64AB7F37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E01005BF-17FC-4DCF-A6EB-4C7D64AB7F37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F4A9261-9909-4A97-904B-68811FA9ECDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F4A9261-9909-4A97-904B-68811FA9ECDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F4A9261-9909-4A97-904B-68811FA9ECDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F4A9261-9909-4A97-904B-68811FA9ECDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{66082265-CE23-469C-832E-91F390EC5FF3} = {7F79B7A7-94C0-43C4-B8E2-7F1210FBF50F}
+		{E01005BF-17FC-4DCF-A6EB-4C7D64AB7F37} = {7418CA81-0582-4E50-AD83-12284172D320}
+		{1F4A9261-9909-4A97-904B-68811FA9ECDC} = {D9C94C07-2BD3-4C8D-968A-B6B852ACD8AE}
+	EndGlobalSection
+EndGlobal

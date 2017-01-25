@@ -1,0 +1,29 @@
+﻿{
+  "version": "5.0.0-*",
+  "buildOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+    "NTRPRS.NLog.Slack": {
+      "target": "project"
+    }
+  },
+
+  "frameworks": {
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.0.1"
+        }
+      }
+    },
+
+    "net451": {
+      "frameworkAssemblies": {
+        "System": ""
+      }
+    }
+  }
+}
