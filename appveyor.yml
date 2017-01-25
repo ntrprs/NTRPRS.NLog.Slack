@@ -1,5 +1,6 @@
-version: 5.0.2-{build}
-clone_folder: c:\projects\nlog
+version: 5.0.4-{build}
+clone_folder: c:\projects\ntrprs
+
 build_script:
   - ps: .\build.ps1
 

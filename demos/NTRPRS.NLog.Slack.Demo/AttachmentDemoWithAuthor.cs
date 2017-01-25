@@ -23,10 +23,10 @@ namespace NTRPRS.NLog.Slack.Demo
                 Title = "I'm a custom object",
                 Text = CustomText, 
                 AuthorName = "Bill Gates",
-                AuthorIcon = "http://www.ie.edu/IE/site/img/iconowlive.gif",
+                AuthorIcon = "https://raw.githubusercontent.com/ntrprs/NTRPRS.NLog.Slack/master/res/author_icon.png",
                 AuthorLink = "https://fr.wikipedia.org/wiki/Bill_Gates",
-                ImageUrl = "https://datadoghq.com/snapshot/path/to/snapshot.png",
-                ThumbUrl = "https://datadoghq.com/snapshot/path/to/snapshot.png",
+                ImageUrl = "https://raw.githubusercontent.com/ntrprs/NTRPRS.NLog.Slack/master/res/lenna.png",
+                ThumbUrl = "https://raw.githubusercontent.com/ntrprs/NTRPRS.NLog.Slack/master/res/lenna_thumb.gif",
                 Color = "#FF1493" // pink is the new black
             };
         }

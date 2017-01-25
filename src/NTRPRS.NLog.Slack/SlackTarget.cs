@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using NLog;
 using NLog.Common;
 using NLog.Config;
@@ -12,8 +11,6 @@ namespace NTRPRS.NLog.Slack
     [Target("Slack")]
     public class SlackTarget : TargetWithLayout
     {
-        private readonly Process _currentProcess = Process.GetCurrentProcess();
-
         [RequiredParameter]
         public string WebHookUrl { get; set; }
 
@@ -24,6 +21,8 @@ namespace NTRPRS.NLog.Slack
         public string Icon { get; set; }
 
         public bool ExcludeLevel { get; set; }
+
+        public bool Embed { get; set; }
         
         protected override void InitializeTarget()
         {
@@ -91,8 +90,27 @@ namespace NTRPRS.NLog.Slack
                     Title = info.LogEvent.Level.ToString(),
                     Color = info.LogEvent.Level.ToSlackColor()
                 };
+                if (Embed)
+                {
+                    mainAttachment.Text = message;
+                    payload.Text = null;
+                }
                 payload.Attachments.Add(mainAttachment);
             }
+            else
+            {
+                if (Embed)
+                {
+                    payload.Text = null;
+                    var mainAttachment = new Attachment
+                    {
+                        Text = message,
+                        Color = info.LogEvent.Level.ToSlackColor()
+                    };
+                    payload.Attachments.Add(mainAttachment);
+                }
+            }
+
             if (info.LogEvent.Parameters != null)
             {
                 foreach (var param in info.LogEvent.Parameters)

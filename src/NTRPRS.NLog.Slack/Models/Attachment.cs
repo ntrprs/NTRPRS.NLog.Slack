@@ -45,7 +45,6 @@ namespace NTRPRS.NLog.Slack.Models
         /// </summary>
         [DataMember(Name = "author_icon")]
         public string AuthorIcon { get; set; }
-
         #endregion
 
         /// <summary>

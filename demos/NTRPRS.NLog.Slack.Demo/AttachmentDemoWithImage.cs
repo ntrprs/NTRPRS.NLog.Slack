@@ -13,11 +13,11 @@ namespace NTRPRS.NLog.Slack.Demo
         {
             return new Attachment
             {
-                Fallback = "Network traffic (kb/s): How does this look? @slack-ops - Sent by Julie Dodd - https://datadog.com/path/to/event",
+                Fallback = "Network traffic (kb/s): How does this look? @slack-ops - Sent by Julie Dodd - https://www.nuget.org/packages/LibGit2Sharp-SSH",
                 Title = "Network traffic (kb/s)",
-                TitleLink = "https://datadog.com/path/to/event",
+                TitleLink = "https://www.nuget.org/packages/LibGit2Sharp-SSH",
                 Text = "How does this look? @slack-ops - Sent by Julie Dodd",
-                ImageUrl = "http://i.stack.imgur.com/fD1qh.png",
+                ImageUrl = "https://raw.githubusercontent.com/ntrprs/NTRPRS.NLog.Slack/master/res/sample.png",
                 Color = "#764FA5"
             };
         }

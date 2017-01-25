@@ -26,6 +26,5 @@ namespace NTRPRS.NLog.Slack.Models
         /// </summary>
         [DataMember(Name = "short")]
         public bool Short { get; set; }
-        
     }
 }
