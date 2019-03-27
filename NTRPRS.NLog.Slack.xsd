@@ -18,8 +18,6 @@
         <choice minOccurs="0" maxOccurs="unbounded">
           <element name="layout" type="nlog:Layout" minOccurs="0" maxOccurs="1" />
           <element name="webHookUrl" type="string" minOccurs="1" maxOccurs="1" nillable="false" />
-          <element name="channel" type="string" minOccurs="0" maxOccurs="1" />
-          <element name="username" type="string" minOccurs="0" maxOccurs="1" />
           <element name="excludeLevel" type="boolean" minOccurs="0" maxOccurs="1" default="false" />
 		  <element name="embed" type="boolean" minOccurs="0" maxOccurs="1" default="false" />
           <element name="icon" type="strng" minOccurs="0" maxOccurs="1" />
@@ -32,16 +30,6 @@
         <attribute name="webHookUrl" type="string">
           <annotation>
             <documentation>Grab your Webhook URL from your Incoming WebHooks integration in Slack</documentation>
-          </annotation>
-        </attribute>
-        <attribute name="channel" type="string">
-          <annotation>
-            <documentation>The channel name (e.g #log) or user (e.g. @eth0) to send NLog messages to. Leave blank to use the integration default.</documentation>
-          </annotation>
-        </attribute>
-        <attribute name="username" type="string">
-          <annotation>
-            <documentation>Name of the user that NLog messages comes from. Leave blank to use the integration default.</documentation>
           </annotation>
         </attribute>
         <attribute name="excludeLevel" type="boolean" default="false">

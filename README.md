@@ -40,11 +40,8 @@ Usage
             name="slackTarget"
             layout="${message}"
             webHookUrl="https://hooks.slack.com/services/%your%/%tokens%/%here%"
-            channel="#log"
             excludeLevel="false"
-            embed="true"
-            username="NTRPRS.NLog.Slack"
-            icon=":ghost:" />
+            embed="true" />
   </targets>
 
   <rules>
@@ -62,8 +59,7 @@ var config = new LoggingConfiguration();
 var slackTarget = new SlackTarget
 {
       Layout = "${message}",
-      WebHookUrl = "https://hooks.slack.com/services/%your%/%tokens%/%here%",
-      Channel = "#log"
+      WebHookUrl = "https://hooks.slack.com/services/%your%/%tokens%/%here%"
 };
 
 config.AddTarget("slack", slackTarget);
@@ -81,8 +77,5 @@ And you're good to go!
 Key         | Description
 -----------:| -----------
 WebHookUrl  | Grab your Webhook URL (__with the token__) from your Incoming Webhooks integration in Slack
-Channel     | The channel name (e.g #log) or user (e.g. @eth0) to send NLog messages to. Leave blank to use the integration default
-Username    | Name of the user that NLog messages comes from. Leave blank to use the integration default
-Icon        | Leave blank to use the integration default. Can either be a URL or Emoji
 ExcludeLevel| Set to true to just send the NLog layout text (no colors, etc)
 Embed       | Set to true to embed NLog layout text into attachment

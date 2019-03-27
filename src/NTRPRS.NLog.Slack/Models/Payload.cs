@@ -15,31 +15,6 @@ namespace NTRPRS.NLog.Slack.Models
     public class Payload
     {
         /// <summary>
-        /// Override incoming webhooks default channel. 
-        /// A public channel can be specified with "#other-channel", and a Direct Message with "@username".
-        /// </summary>
-        [DataMember(Name = "channel")]
-        public string Channel { get; set; }
-
-        /// <summary>
-        /// Override incoming webhook's configured name.
-        /// </summary>
-        [DataMember(Name = "username")]
-        public string Username { get; set; }
-
-        /// <summary>
-        /// Override the bot icon
-        /// </summary>
-        [DataMember(Name = "icon_url")]
-        public string IconUrl { get; set; }
-
-        /// <summary>
-        /// Override the bot icon
-        /// </summary>
-        [DataMember(Name = "icon_emoji")]
-        public string IconEmoji { get; set; }
-
-        /// <summary>
         /// Simple message that will be posted to the channel.
         /// To create a link in your text, enclose the URL in <> angle brackets.For example: <https://slack.com>
         /// will post a clickable link to https://slack.com.
@@ -53,24 +28,6 @@ namespace NTRPRS.NLog.Slack.Models
         /// </summary>
         [DataMember(Name = "attachments")]
         public readonly ICollection<Attachment> Attachments = new List<Attachment>();
-
-        /// <summary>
-        /// Set the IconUrl attribute if icon look like a Uri, else set the IconEmoji attribute
-        /// </summary>
-        /// <param name="icon"></param>
-        public void SetIcon(string icon)
-        {
-            Uri uriResult;
-            if (Uri.TryCreate(icon, UriKind.Absolute, out uriResult)
-                && uriResult.Scheme == "http")
-            {
-                IconUrl = icon;
-            }
-            else
-            {
-                IconEmoji = icon;
-            }
-        }
 
         /// <summary>
         /// Create JSON that will be send to Slack
