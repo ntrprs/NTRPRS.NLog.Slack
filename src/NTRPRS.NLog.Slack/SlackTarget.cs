@@ -14,12 +14,6 @@ namespace NTRPRS.NLog.Slack
         [RequiredParameter]
         public string WebHookUrl { get; set; }
 
-        public SimpleLayout Channel { get; set; }
-
-        public SimpleLayout Username { get; set; }
-
-        public string Icon { get; set; }
-
         public bool ExcludeLevel { get; set; }
 
         public bool Embed { get; set; }
@@ -35,12 +29,6 @@ namespace NTRPRS.NLog.Slack
             if (!Uri.TryCreate(WebHookUrl, UriKind.Absolute, out uriResult))
             {
                 throw new ArgumentOutOfRangeException(nameof(WebHookUrl), "Webhook URL is an invalid URL.");
-            }
-
-            if (!string.IsNullOrWhiteSpace(Channel.Text)
-                && (!Channel.Text.StartsWith("#") && !Channel.Text.StartsWith("@") && !Channel.Text.StartsWith("${")))
-            {
-                throw new ArgumentOutOfRangeException(nameof(Channel), "The Channel name is invalid. It must start with either a # or a @ symbol or use a variable.");
             }
 
             base.InitializeTarget();
@@ -65,23 +53,6 @@ namespace NTRPRS.NLog.Slack
             {
                 Text = message
             };
-
-            var channel = Channel.Render(info.LogEvent);
-            if (!string.IsNullOrWhiteSpace(channel))
-            {
-                payload.Channel = channel;
-            }
-
-            if (!string.IsNullOrWhiteSpace(Icon))
-            {
-                payload.SetIcon(Icon);
-            }
-
-            var username = Username.Render(info.LogEvent);
-            if (!string.IsNullOrWhiteSpace(username))
-            {
-                payload.Username = username;
-            }
 
             if (!ExcludeLevel)
             {

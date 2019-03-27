@@ -1,5 +1,10 @@
 version: 5.0.4-{build}
 clone_folder: c:\projects\ntrprs
+image: Visual Studio 2017
+
+init:
+  # Good practise, because Windows line endings are different from Unix/Linux ones
+  - cmd: git config --global core.autocrlf true
 
 build_script:
   - ps: .\build.ps1
