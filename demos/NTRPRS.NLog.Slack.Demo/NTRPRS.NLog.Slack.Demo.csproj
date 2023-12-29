@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <VersionPrefix>5.0.4</VersionPrefix>
-    <TargetFrameworks>netcoreapp1.0;net451</TargetFrameworks>
+    <TargetFrameworks>netcoreapp1.0;net451;net8.0</TargetFrameworks>
     <AssemblyName>NTRPRS.NLog.Slack.Demo</AssemblyName>
     <OutputType>Exe</OutputType>
     <PackageId>NTRPRS.NLog.Slack.Demo</PackageId>
